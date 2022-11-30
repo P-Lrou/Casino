@@ -1,0 +1,283 @@
+@font-face {
+    font-family: casino;
+    src: url(fonts/Casino.otf);
+}
+
+* {
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+body {
+    background-image: url("pictures/background.png");
+    background-size: auto;
+    animation: spawn 0.25s;
+    transition: all 0.5s;
+}
+
+.interface {
+    transition: all 1s;
+    animation: spawn 0.25s;
+}
+
+.interface h1 {
+    position: relative;
+    margin: 0%;
+    text-align: center;
+    font-family: casino;
+    font-size: 15vh;
+    color: gold;
+}
+
+.interface h2 {
+    position: absolute;
+    text-align: center;
+    margin: 0%;
+    font-family: casino;
+    font-size: 2vh;
+    color: gold;
+}
+
+.interface .player1 {
+    left: 12%;
+}
+
+.interface .player2 {
+    right: 12%;
+}
+
+.roulette .roulette1 {
+    position: absolute;
+    width: 30vw;
+    margin-left: 34vw;
+    margin-top: 3vw;
+}
+
+.roulette .roulette2 {
+    position: absolute;
+    width: 30vw;
+    margin-left: 34vw;
+    margin-top: 3vw;
+    animation: rotation 0.5s infinite paused;
+}
+
+.gauge1 {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    height: 70vh;
+    width: 4vw;
+    border-radius: 30px;
+    transform: rotate(180deg);
+    transition: all 1s;
+    animation: spawn 0.25s;
+    box-shadow: 0px 0px 1vh rgb(255, 255, 255);
+}
+
+.gauge1 .gauge1_back {
+    position: absolute;
+    background-color: #8B0001;
+    height: 70vh;
+    width: 4vw;
+    border-radius: 30px;
+}
+
+.gauge1 .gauge1_front {
+    position: absolute;
+    background-color: red;
+    height: 0.7vh;
+    width: 4vw;
+    border-radius: 30px;
+}
+
+.gauge2 {
+    position: absolute;
+    top: 20%;
+    right: 13%;
+    height: 70vh;
+    width: 4vw;
+    border-radius: 30px;
+    transform: rotate(180deg);
+    transition: all 1s;
+    animation: spawn 0.25s;
+    box-shadow: 0px 0px 1vh rgb(255, 255, 255);
+}
+
+.gauge2 .gauge2_back {
+    position: absolute;
+    background-color: #003366;
+    height: 70vh;
+    width: 4vw;
+    border-radius: 30px;
+}
+
+.gauge2 .gauge2_front {
+    position: absolute;
+    background-color: blue;
+    height: 0.7vh;
+    width: 4vw;
+    border-radius: 30px;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("pictures/monnaie.png") repeat 0px 0px;
+    animation: dropFlowParticles 5s linear infinite;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.overlay .menu {
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1s;
+    border-radius: 10px;
+    width: 10.2vw;
+    height: 7.05vw;
+    background-image: url("pictures/menu.png");
+    background-size: cover;
+    box-shadow: 0px 0px 1vh rgb(255, 255, 255);
+    margin-bottom: 3%;
+}
+
+.overlay .back_card {
+    position: absolute;
+    width: 10.2vw;
+    height: 7.05vw;
+    mix-blend-mode: color-dodge;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif);
+}
+
+.overlay .menu:hover {
+    scale: 1.2;
+    transition: all 1s;
+}
+
+.overlay h1 {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    font-family: casino;
+    font-size: 20vh;
+    color: gold;
+}
+
+.overlay .menu_start h1 {
+    margin-top: 8%;
+    text-align: center;
+    font-family: casino;
+    font-size: 20vh;
+    color: gold;
+}
+
+.overlay h2 {
+    top: 20%;
+    text-align: center;
+    font-family: casino;
+    font-size: 10vh;
+    color: gold;
+}
+
+.button_play {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    background-color: transparent;
+    font-size: 3vw;
+    font-family: casino;
+    color: gold;
+    padding: 0.5vw;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-color: gold;
+    transition: all 1s;
+}
+
+.button_play:hover {
+    scale: 1.2;
+    transition: all 1s;
+}
+
+.background_monnaie {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes dropFlowParticles {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 1080px;
+    }
+}
+
+@keyframes spawn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(36deg);
+        ;
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+
+    30% {
+        transform: rotate(108deg);
+    }
+
+    40% {
+        transform: rotate(144deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(216deg);
+    }
+
+    70% {
+        transform: rotate(252deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    90% {
+        transform: rotate(324deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}

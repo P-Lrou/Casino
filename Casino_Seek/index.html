@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Casino Seek</title>
+    <link rel="icon" type="image/png" sizes="50x50" href="pictures/logo.png">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="interface">
+        <h1>CASINO SEEK</h1>
+        <h2>Number of trials : <span class="number"></span> / <span class="numberLimit"></span></h2>
+        <div class="actual_mode">
+            <h3>Actual version </h3>
+            <button class="button_easy_fake" type="button" style="border-color: red; color: red;">Easy</button>
+            <button class="button_medium_fake" type="button">Medium</button>
+            <button class="button_hard_fake" type="button">Hard</button>
+        </div>
+    </div>
+    <div class="cards">
+
+    </div>
+
+    <div class="overlay">
+
+        <div class="menu_start">
+            <h1>Welcome !</h1>
+        </div>
+        <div class="menu_win">
+            <h1>YOU WIN !</h1>
+            <h2>You found it in : <span class="number_menu"></span> trials.</h2>
+        </div>
+        <div class="menu_loose">
+            <h1>YOU LOOSE !</h1>
+            <h2>TRY AGAIN</h2>
+        </div>
+        <div class="menu">
+            <a href="../index.html" style="text-decoration: none;">
+                <div class="back_card"></div>
+            </a>
+        </div>
+        <h3>Choose your version :</h3>
+        <div class="mode">
+            <button class="button_easy" type="button" style="border-color: red; color: red;">Easy</button>
+            <button class="button_medium" type="button">Medium</button>
+            <button class="button_hard" type="button">Hard</button>
+        </div>
+        <button class="button_play" type="button">Play</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
